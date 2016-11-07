@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+	<meta charset="gb2312">
+	<title></title>
+	<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="mod1/mod.js"></script>
+	<link rel="stylesheet" href="mod1/mod.css" />
+	<style type="text/css">
+	.main{width:960px;margin:0px auto;}
+	.left{width:200px;}
+	.right{width:750px;}
+	
+	.fr{float:right;}
+	.fl{float:left;}
+	</style>
+	<script type="text/javascript">
+	
+	$(function(){
+		var mlist1=mod.cMlist("mlist1","mk1");
+		mlist1.add("条目1","这是条目1","1.html");
+		mlist1.add("条目2","这是条目2","2.html");
+		mlist1.add("条目3","这是条目3","3.html");
+		var mlist3=mod.cMlist("mlist3","mk2");
+		mlist3.add("条目1","这是条目1","1.html");
+		mlist3.add("条目2","这是条目2","2.html");
+		mlist3.add("条目3","这是条目3","3.html");
+		//mlist1.remove(1);
+		//
+		var mlist2=mod.cMlist("mlist2");
+		mlist2.addImgText("图片1","这是图片1","1.html","8.jpg");
+		mlist2.add("条目1","这是条目1这是条目1这是条目1这是条目1这是条目1这是条目1这是条目1这是条目1这是条目1这是条目1这是条目1这是条目1这是条目1这是条目1这是条目1这是条目1","1.html");
+		mlist2.add("JQ简单加法计算器","练习JQ基本的取值、赋值相加","2.html");
+		mlist2.add("条目3","这是条目3","3.html");
+		mlist2.add("条目1","这是条目1","1.html");
+		mlist2.add("条目2","这是条目2","2.html");
+		mlist2.add("条目3","这是条目3","3.html");
+		mlist2.add("条目1","这是条目1","1.html");
+		mlist2.add("条目2","这是条目2","2.html");
+		mlist2.add("条目3","这是条目3","3.html");
+		mlist2.add("条目1","这是条目1","1.html");
+		mlist2.add("条目2","这是条目2","2.html");
+		mlist2.add("条目3","这是条目3","3.html");
+		mlist2.add("条目1","这是条目1","1.html");
+		mlist2.add("条目2","这是条目2","2.html");
+		mlist2.add("条目3","这是条目3","3.html");
+	});
+	</script>
+	</head>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+	</ul>
+	<div class="main">
+		<div class="left fl">
+			<div id="mlist1">
+			
+			</div>
+			<div id="mlist3">
+			
+			</div>
+		</div>
+		<div class="right fr">
+			<div id="mlist2">
+			
+			</div>
+		</div>
+	</div>
+</body>
+</html>

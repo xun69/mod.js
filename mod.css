@@ -1,0 +1,17 @@
+/*
+
+*/
+
+
+/*带描述的无序列表组件*/
+.Mlist{width:100%;border:1px solid gray;margin-bottom:10px;}
+.Mlist>h3{background:#ccc;height:30px;line-height:30px;text-indent:5px;}
+.Mlist h1,.Mlist h2,.Mlist h3{margin:0px;padding:0px;}
+.Mlist>ul,.Mlist>ul>li{margin:10px;padding:0px;list-style:none;}
+.Mlist>ul>li{margin:10px 0px;}
+.Mlist>ul>li.imgText{border-bottom:1px dotted gray;}
+.Mlist>ul>li.imgText .imgC{width:99%;height:180px;overflow:hidden;background:#ccc;text-align:center;margin-bottom:5px;}
+.Mlist>ul>li.imgText .imgC>img{width:280px;}
+.Mlist>ul>li>a{font-size:14px;text-decoration:none;}
+.Mlist>ul>li>a:hover{text-decoration:underline;}
+.Mlist>ul>li>span{font-size:12px;}
