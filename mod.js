@@ -1,7 +1,7 @@
 /***********************************************************
-*»ùÓÚJQ+JS¶ÔÏóÊµÏÖµÄ¸öÈËweb×é¼ş¿ò¼Ü
-*´´½¨Ê±¼ä£º2016Äê10ÔÂ12ÈÕ23:28:38
-*×îºóĞŞ¸ÄÊ±¼ä£º2016Äê10ÔÂ12ÈÕ23:28:47
+*åŸºäºJQ+JSå¯¹è±¡å®ç°çš„ä¸ªäººwebç»„ä»¶æ¡†æ¶
+*åˆ›å»ºæ—¶é—´ï¼š2016å¹´10æœˆ12æ—¥23:28:38
+*æœ€åä¿®æ”¹æ—¶é—´ï¼š2016å¹´10æœˆ12æ—¥23:28:47
 ***********************************************************/
 
 
@@ -9,17 +9,17 @@
 
 
 /*
-*´øÃèÊöµÄÎŞĞòÁĞ±í×é¼ş
+*å¸¦æè¿°çš„æ— åºåˆ—è¡¨ç»„ä»¶
 */
 var Mlist={
 	cNew:function(id,mkTitle){
-		var m_id=id;//´æ´¢»ñÈ¡µÄÈİÆ÷id
-		var m_mkTitle=mkTitle//´æ´¢Ä£¿é±êÌâ
+		var m_id=id;//å­˜å‚¨è·å–çš„å®¹å™¨id
+		var m_mkTitle=mkTitle//å­˜å‚¨æ¨¡å—æ ‡é¢˜
 		//alert(m_mkTitle);
 		var mlist={};
-		//ÉèÖÃÈİÆ÷³õÊ¼»¯£º1.Ìî³ä½á¹¹´úÂë;2.Ìí¼Ó×é¼şclassName
+		//è®¾ç½®å®¹å™¨åˆå§‹åŒ–ï¼š1.å¡«å……ç»“æ„ä»£ç ;2.æ·»åŠ ç»„ä»¶className
 		var intHTMLStr;
-		//Èç¹ûÉèÖÃÁËÄ£¿é±êÌâ
+		//å¦‚æœè®¾ç½®äº†æ¨¡å—æ ‡é¢˜
 		if(typeof(m_mkTitle)!="undefined"){
 			intHTMLStr="<h3>" + m_mkTitle + "</h3><ul></ul>";
 		}else{
@@ -27,19 +27,19 @@ var Mlist={
 		}
 		$("#" + m_id ).html(intHTMLStr).addClass("Mlist");
 		//alert($("#" + m_id).html());
-		//ÆÕÍ¨ÁĞ±íÏîHTMLÄ£°å×Ö´®
+		//æ™®é€šåˆ—è¡¨é¡¹HTMLæ¨¡æ¿å­—ä¸²
 		var itemStr="<li><a href='a_link'><h3>i_title</h3></a><span>i_dsc</span></li>"
-		//Í¼ÎÄÁĞ±íÏîHTMLÄ£°å×Ö´®
+		//å›¾æ–‡åˆ—è¡¨é¡¹HTMLæ¨¡æ¿å­—ä¸²
 		var imgTextItemStr="<li class='imgText'><a href='a_link'><div class='imgC'><img src='i_imgUrl'></div><h3>i_title</h3></a><span>i_dsc</span></li>"
-		//*************·½·¨**************
-		//Ìí¼ÓÏî
+		//*************æ–¹æ³•**************
+		//æ·»åŠ é¡¹
 		mlist.add=function(title,dsc,url){
 			var nItem=itemStr.replace(/i_title/,title);
 				nItem=nItem.replace(/i_dsc/,dsc);
 				nItem=nItem.replace(/a_link/,url);
 			$("#" + m_id + ">ul").append(nItem);
 		}
-		//Ìí¼ÓÍ¼ÎÄÏî
+		//æ·»åŠ å›¾æ–‡é¡¹
 		mlist.addImgText=function(title,dsc,url,imgUrl){
 			var nItem=imgTextItemStr.replace(/i_title/,title);
 				nItem=nItem.replace(/i_dsc/,dsc);
@@ -47,7 +47,7 @@ var Mlist={
 				nItem=nItem.replace(/i_imgUrl/,imgUrl);
 			$("#" + m_id + ">ul").append(nItem);
 		}
-		//ÒÆ³ıÏî
+		//ç§»é™¤é¡¹
 		mlist.remove=function(index){
 			$("#" + m_id + ">ul>li:eq(" + index + ")").remove();
 		}
@@ -55,8 +55,8 @@ var Mlist={
 		return mlist;
 	}
 }
-//×é¼ş¿ò¼ÜÈ«¾Ö¶ÔÏómod
-//ÓÃÓÚÌá¹©Í³Ò»µÄ´´½¨ÆìÏÂµÄ×é¼şµÄÈë¿Ú
+//ç»„ä»¶æ¡†æ¶å…¨å±€å¯¹è±¡mod
+//ç”¨äºæä¾›ç»Ÿä¸€çš„åˆ›å»ºæ——ä¸‹çš„ç»„ä»¶çš„å…¥å£
 var mod={
 	cMlist:function(id,mkTitle){var mlist=Mlist.cNew(id,mkTitle);return mlist;}
 }
